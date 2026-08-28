@@ -13,10 +13,12 @@ html {
 }
 
 body {
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background: #06111b;
     color: #ffffff;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 
@@ -26,9 +28,9 @@ body {
 
 header {
     width: 100%;
-    height: 70px;
+    min-height: 70px;
 
-    padding: 0 35px;
+    padding: 12px clamp(15px, 3vw, 40px);
 
     display: flex;
     align-items: center;
@@ -36,20 +38,28 @@ header {
     background: #050d15;
 
     border-bottom: 1px solid #293945;
+
+    gap: 15px;
 }
 
 
-/* LOGO */
+/* =========================
+   LOGO
+========================= */
 
 .logo {
     width: 155px;
 
     line-height: 1;
+
+    flex-shrink: 0;
 }
 
 .logo div {
     font-size: 35px;
+
     font-weight: 900;
+
     letter-spacing: -3px;
 }
 
@@ -59,20 +69,27 @@ header {
     margin-left: 7px;
 
     font-size: 8px;
+
     letter-spacing: 1.5px;
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     display: flex;
 
     align-items: center;
 
-    gap: 27px;
+    justify-content: flex-end;
+
+    gap: clamp(12px, 2vw, 27px);
 
     margin-left: auto;
+
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -86,7 +103,9 @@ nav a {
 
     font-weight: bold;
 
-    padding: 27px 0;
+    padding: 15px 0;
+
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -94,61 +113,22 @@ nav a:hover {
 }
 
 
-/* ACTIVE PRODUCTS */
+/* ACTIVE DIGITAL SERVICES */
 
-nav a[href="products.html"]::after {
+nav a[href="digitalcareer.html"]::after {
     content: "";
 
     position: absolute;
 
     left: 0;
-    bottom: 15px;
+
+    bottom: 7px;
 
     width: 100%;
+
     height: 2px;
 
     background: #ffffff;
-}
-
-
-/* GET STARTED */
-
-header > a {
-    margin-left: 25px;
-
-    padding: 11px 16px;
-
-    border: 1px solid #536370;
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 10px;
-
-    font-weight: bold;
-}
-
-header > a:hover {
-    background: #142432;
-}
-
-
-/* MENU BUTTON */
-
-header button {
-    width: 36px;
-    height: 36px;
-
-    margin-left: 10px;
-
-    background: transparent;
-
-    border: 1px solid #344552;
-
-    color: white;
-
-    font-size: 17px;
 }
 
 
@@ -159,11 +139,9 @@ header button {
 main {
     width: 100%;
 
-    max-width: none;
+    margin: 0 auto;
 
-    margin: auto;
-
-    padding: 38px 40px;
+    padding: 38px clamp(20px, 4vw, 70px);
 }
 
 
@@ -172,17 +150,19 @@ main {
 ========================= */
 
 .hero {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 45px;
+    gap: clamp(30px, 4vw, 65px);
 
     align-items: center;
 }
 
 
-/* HERO LEFT */
+/* HERO CONTENT */
 
 .hero-content {
     padding-left: 3px;
@@ -197,7 +177,7 @@ main {
 }
 
 .hero-content h1 {
-    font-size: 44px;
+    font-size: clamp(38px, 4vw, 52px);
 
     line-height: 1.05;
 
@@ -207,7 +187,7 @@ main {
 }
 
 .hero-content p {
-    max-width: 430px;
+    max-width: 480px;
 
     color: #a4afb7;
 
@@ -222,6 +202,8 @@ main {
 ========================= */
 
 .product-intro {
+    width: 100%;
+
     padding: 27px 20px 17px;
 
     border: 1px solid #30414e;
@@ -230,9 +212,6 @@ main {
 
     background: #081621;
 }
-
-
-/* TOP */
 
 .intro-top {
     display: flex;
@@ -278,7 +257,9 @@ main {
 }
 
 
-/* INTRO FEATURES */
+/* =========================
+   INTRO FEATURES
+========================= */
 
 .intro-features {
     display: grid;
@@ -355,9 +336,6 @@ main {
 .digital-products {
     margin-top: 35px;
 }
-
-
-/* PRODUCT CARDS */
 
 .product-cards {
     display: grid;
@@ -442,7 +420,9 @@ main {
 }
 
 
-/* DESCRIPTION */
+/* =========================
+   DESCRIPTION
+========================= */
 
 .product-description {
     color: #a2adb5;
@@ -459,7 +439,9 @@ main {
 }
 
 
-/* PRODUCT LIST */
+/* =========================
+   PRODUCT LIST
+========================= */
 
 .product-card ul {
     list-style: none;
@@ -487,6 +469,7 @@ main {
     left: 0;
 
     width: 14px;
+
     height: 14px;
 
     border: 1px solid #9aa8b1;
@@ -503,7 +486,9 @@ main {
 }
 
 
-/* PRODUCT BUTTON */
+/* =========================
+   PRODUCT BUTTON
+========================= */
 
 .product-card > a {
     margin-top: auto;
@@ -540,10 +525,9 @@ main {
     margin-top: 25px;
 }
 
-
-/* CREDENTIAL CARD */
-
 .credential-card {
+    width: 100%;
+
     padding: 22px 20px 17px;
 
     border: 1px solid #3a4b57;
@@ -674,7 +658,9 @@ main {
 }
 
 
-/* CREDENTIAL BUTTON */
+/* =========================
+   CREDENTIAL BUTTON
+========================= */
 
 .credential-card > a {
     display: block;
@@ -708,6 +694,8 @@ main {
 ========================= */
 
 .bottom-information {
+    width: 100%;
+
     margin-top: 12px;
 
     min-height: 43px;
@@ -725,6 +713,8 @@ main {
     align-items: center;
 
     justify-content: space-between;
+
+    gap: 20px;
 }
 
 .bottom-information div {
@@ -761,34 +751,43 @@ footer {
 }
 
 
-/* =========================
+/* ==================================================
    TABLET
-========================= */
+================================================== */
 
 @media (max-width: 1000px) {
 
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .logo div {
+        font-size: 31px;
+    }
+
     nav {
-        gap: 14px;
+        gap: 12px;
     }
 
     nav a {
         font-size: 8px;
     }
 
-    header > a {
-        margin-left: 12px;
-    }
-
     .hero {
         grid-template-columns: 1fr;
     }
 
-    .verification-items {
-        grid-template-columns: repeat(5, 1fr);
+    .product-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .verification-items > div:nth-child(5) {
-        border-right: 1px solid #344550;
+    .verification-items {
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .verification-items > div {
@@ -797,22 +796,46 @@ footer {
 }
 
 
-/* =========================
-   TABLET / MOBILE
-========================= */
+/* ==================================================
+   MOBILE / TABLET
+================================================== */
 
 @media (max-width: 750px) {
 
     header {
-        padding: 0 20px;
+        min-height: auto;
+
+        padding: 15px;
+
+        align-items: flex-start;
     }
+
+    /*
+       NAVIGATION REMAINS VISIBLE ON MOBILE
+    */
 
     nav {
-        display: none;
+        display: flex;
+
+        width: 100%;
+
+        margin-left: auto;
+
+        justify-content: flex-end;
+
+        gap: 8px 12px;
+
+        flex-wrap: wrap;
     }
 
-    header > a {
-        margin-left: auto;
+    nav a {
+        font-size: 8px;
+
+        padding: 8px 0;
+    }
+
+    nav a[href="digitalcareer.html"]::after {
+        bottom: 2px;
     }
 
     main {
@@ -857,26 +880,58 @@ footer {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* ==================================================
+   SMALL MOBILE
+================================================== */
 
 @media (max-width: 500px) {
 
+    header {
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 14px 12px;
+    }
+
     .logo {
-        width: 110px;
+        width: auto;
+
+        text-align: center;
     }
 
     .logo div {
         font-size: 28px;
     }
 
-    header > a {
-        display: none;
+    .logo span {
+        margin-left: 0;
+
+        font-size: 7px;
     }
 
-    header button {
-        margin-left: auto;
+    /*
+       NAVIGATION STILL VISIBLE
+    */
+
+    nav {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 6px 11px;
+
+        margin: 8px 0 0;
+    }
+
+    nav a {
+        font-size: 8px;
+
+        padding: 5px 0;
+    }
+
+    nav a[href="digitalcareer.html"]::after {
+        bottom: 0;
     }
 
     main {
@@ -897,6 +952,7 @@ footer {
 
     .intro-icon {
         width: 65px;
+
         height: 65px;
 
         font-size: 28px;
@@ -920,6 +976,7 @@ footer {
 
     .product-icon {
         width: 52px;
+
         height: 52px;
     }
 
