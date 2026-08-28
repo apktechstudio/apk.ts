@@ -1,0 +1,683 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #06111b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #050d15;
+    border-bottom: 1px solid #263440;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 155px;
+
+    line-height: 1;
+}
+
+
+.logo div {
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    font-family: 'Ethnocentric-Regular', sans-serif;}
+
+
+.logo span {
+    display: block;
+
+    margin-left: 7px;
+
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #aebdcc;
+}
+
+
+/* GET STARTED */
+
+.get-started {
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid #586979;
+    padding: 11px 18px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.get-started:hover {
+    background-color: #142332;
+}
+
+
+/* MENU */
+
+.menu-button {
+    background: transparent;
+    color: white;
+
+    border: 1px solid #334452;
+
+    padding: 8px 11px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    min-height: 470px;
+
+    padding: 70px clamp(25px, 5vw, 80px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: clamp(40px, 6vw, 100px);
+
+    align-items: center;
+}
+
+/* HERO TEXT */
+
+.hero-content h1 {
+    font-size: 45px;
+    line-height: 1.05;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    max-width: 480px;
+
+    color: #9daab6;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    border: 1px solid #596a79;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero-buttons a:hover {
+    background-color: #162635;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats {
+    border: 1px solid #31404d;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    background-color: #081620;
+}
+
+.stat-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.stat {
+    min-height: 175px;
+
+    padding: 30px;
+
+    border-bottom: 1px solid #263642;
+}
+
+.stat:nth-child(odd) {
+    border-right: 1px solid #263642;
+}
+
+.stat-card:last-child .stat {
+    border-bottom: none;
+}
+
+.stat h2 {
+    font-size: 27px;
+    margin-bottom: 2px;
+}
+
+.stat p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.stat span {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #9aa7b2;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   WHAT WE OFFER
+========================= */
+
+.offer {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    padding: 45px clamp(25px, 5vw, 80px);
+}
+
+.offer > h2 {
+    text-align: center;
+
+    font-size: 19px;
+
+    margin-bottom: 30px;
+}
+
+.offer-container {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+
+/* OFFER CARD */
+
+.offer-card {
+    min-height: 250px;
+
+    padding: 20px;
+
+    border: 1px solid #30404d;
+
+    background-color: #07131e;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-card:hover {
+    border-color: #71808d;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background-color: #14222e;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
+
+.offer-card h3 {
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+.offer-card p {
+    color: #9ba8b3;
+
+    font-size: 17px;
+}
+
+.offer-card a {
+    margin-top: auto;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   TECHNOLOGY
+========================= */
+
+.technology {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    padding: 35px clamp(25px, 5vw, 80px);
+
+    border: 1px solid #30404d;
+}
+
+.technology > h2 {
+    text-align: center;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+.technology-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* TECHNOLOGY CARD */
+
+.technology-card {
+    min-height: 220px;
+
+    padding: 25px;
+
+    border: 1px solid #344552;
+
+    display: flex;
+
+    gap: 25px;
+
+    background-color: #07131e;
+}
+
+.technology-icon {
+    width: 90px;
+    height: 90px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #526372;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+}
+
+.technology-card h3 {
+    font-size: 16px;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+.technology-card ul {
+    padding-left: 18px;
+
+    color: #a2adb7;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+.technology-card a {
+    display: inline-block;
+
+    padding: 10px 15px;
+
+    border: 1px solid #586977;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.technology-card a:hover {
+    background-color: #162635;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    padding: 20px clamp(20px, 4vw, 60px);
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    border: 1px solid #30404d;
+}
+
+.features div {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    border-right: 1px solid #30404d;
+}
+
+.features div:last-child {
+    border-right: none;
+}
+
+.features strong {
+    font-size: 20px;
+}
+
+.features span {
+    color: #a3afb9;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #788691;
+
+    font-size: 11px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: flex;
+        gap: 18px;
+
+        margin-left: auto;
+
+        overflow-x: auto;
+        white-space: nowrap;
+
+        scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a {
+        flex-shrink: 0;
+        font-size: 9px;
+        padding: 20px 0;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 50px 25px;
+    }
+
+    .offer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .technology-container {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features div {
+        border-bottom: 1px solid #30404d;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        height: 65px;
+        padding: 0 10px;
+
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 90px;
+        flex-shrink: 0;
+    }
+
+    .logo div {
+        font-size: 27px;
+    }
+
+    .logo span {
+        font-size: 6px;
+        margin-left: 5px;
+    }
+
+    /* MOBILE NAVIGATION */
+
+    nav {
+        display: flex;
+
+        gap: 16px;
+
+        margin-left: 12px;
+
+        flex: 1;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        white-space: nowrap;
+
+        scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a {
+        flex-shrink: 0;
+
+        font-size: 8px;
+
+        padding: 20px 0;
+    }
+
+    /* Hide GET STARTED on phone */
+
+    .get-started {
+        display: none;
+    }
+
+    /* Menu */
+
+    .menu-button {
+        flex-shrink: 0;
+
+        width: 32px;
+        height: 32px;
+
+        padding: 5px;
+
+        font-size: 15px;
+
+        margin-left: 8px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    .stat-card {
+        grid-template-columns: 1fr;
+    }
+
+    .stat {
+        border-right: none !important;
+    }
+
+    .offer {
+        padding: 40px 20px;
+    }
+
+    .offer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .technology {
+        margin: 0;
+        padding: 25px 15px;
+    }
+
+    .technology-card {
+        flex-direction: column;
+    }
+
+    .features {
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .features div {
+        border-right: none;
+    }
+}
